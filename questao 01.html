@@ -1,0 +1,120 @@
+<!DOCTYPE>
+
+<html>
+	<head>
+		<title>Cadastro de Alunos</title>
+		<link rel="stylesheet" href="css/bootstrap.css"/>
+	</head>
+
+	<body>
+		<div class="container">
+			<h1>Formulário para cadastro de alunos</h1>
+			<form class="row">
+				<div class="col-4 ">
+					<label>Nome:</label>
+					<input id="nome" type="text" name="nome" class="form-control"/>
+				</div>
+				
+				<div class="col-2 ">
+					<label>Data de nascimento:</label>
+					<input id="data"type="text" name="data" class="form-control"/>			
+				</div>
+				
+				<div class="col-2 ">
+					<label>Ano que cursa:</label>
+					<input id="ano" type="text" name="ano" class="form-control"/>
+				</div>
+				
+				<div class="col-2 ">
+					<label>Matéria preferida:</label>
+					<input id="materia" type="text" name="materia" class="form-control"/>
+				</div>
+				
+				<div class="col-1">
+					<button onclick="salvarAluno()" type="button" class="btn btn-primary" style="margin-top: 5px;">Salvar</button>
+				</div>
+					
+				<br/>
+				<table class="table table-striped">
+					<colgroup>
+						<col width="300">
+						<col width="200">
+						<col width="200">
+						<col width="50">
+						<col width="50">
+					</colgroup>
+					
+					<thead>
+						<th>Nome</th>
+						<th>Data de nascimento</th>
+						<th>Ano que cursa</th>
+						<th>Matéria preferida</th>
+						<th>Editar</th>
+						<th>Excluir</th>
+					</thead>
+					
+					<tbody>
+						<tr>
+							<td id="tdnome"></td>
+							<td id="tddata"></td>
+							<td id="tdano"></td>
+							<td id="tdmateria"></td>
+							<td>
+								<button class="btn btn-warning">Editar</button>
+							</td>
+							<td>
+								<button class="btn btn-danger">Excluir</button>
+							</td>
+						
+						</tr>
+						
+						<tr>
+							<td>Rayane</td>
+							<td>29/01/2004</td>
+							<td>2° ano</td>
+							<td>Física</td>
+							<td>
+								<button class="btn btn-warning">Editar</button>
+							</td>
+							<td>
+								<button class="btn btn-danger">Excluir</button>
+							</td>
+						
+						</tr>
+						
+						<tr>
+							<td>Emerson</td>
+							<td>13/01/1997</td>
+							<td>5° período</td>
+							<td>Ed. Física</td>
+							<td>
+								<button class="btn btn-warning">Editar</button>
+							</td>
+							<td>
+								<button class="btn btn-danger">Excluir</button>
+							</td>
+						
+						</tr>
+					</tbody>
+					
+				</table>
+			</form>
+		</div>
+	</body>
+	<script>
+		function salvarAluno() {
+			var nome, data, ano, materia;
+			
+			nome = document.getElementById("nome").value;
+			data = document.getElementById("data").value; 
+			ano = document.getElementById("ano").value;
+			materia = document.getElementById("materia").value;
+			
+			document.getElementById("tdnome").innerHTML=nome;
+			document.getElementById("tddata").innerHTML=data;
+			document.getElementById("tdano").innerHTML=ano;
+			document.getElementById("tdmateria").innerHTML=materia;
+			
+		}
+	</script>
+</html>
